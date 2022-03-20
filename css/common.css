@@ -1,0 +1,93 @@
+@charset "utf-8";
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	list-style: none;
+}
+
+.hide {
+	width: 0;
+	height: 0;
+	line-height: 0;
+	position: absolute;
+	text-indent: -9999px;
+	display: block;
+	overflow: hidden;
+}
+
+#slideshow {
+	position: relative;
+	width: 940px;
+	height: 430px;
+	margin: 50px auto;
+}
+
+.mask {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.mask .slide {
+	position: absolute;
+	width: 3760px;
+	height: 430px;
+}
+
+.mask .slide li {
+	float: left;
+}
+
+.slide_btn {
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	transform: translatex(-50%);
+}
+
+.slide_btn ul li {
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	cursor: pointer;
+	background: rgba(255, 255, 255, 0.5);
+	margin: 0 5px;
+}
+
+.slide_btn ul li.active {
+	background: rgba(255, 255, 255, 1);
+}
+
+.prev,
+.next {
+	position: absolute;
+	top: 50%;
+	transform: translatey(-50%);
+	display: block;
+	width: 65px;
+	height: 65px;
+}
+
+.prev {
+	left: 5px;
+	background: url(../images/lbtn_off.png) no-repeat;
+}
+
+.prev:hover {
+	background: url(../images/lbtn_on.png) no-repeat;
+}
+
+.next {
+	right: 5px;
+	background: url(../images/rbtn_off.png) no-repeat;
+}
+
+.next:hover {
+	background: url(../images/rbtn_on.png) no-repeat;
+}
